@@ -10,44 +10,38 @@ import SwiftUI
 
 struct ContentView: View {
     @State var name: String = ""
-    
+    @State var keywords: String = ""
+    @State var name1: String = ""
+    @State var name2: String = ""
     
     var body: some View {
-        HStack(alignment: .top){
-            VStack(alignment: .leading){
-                HStack(){
-                    Text("图标箱 ->")
-                        .multilineTextAlignment(.leading)
-                    Text("收件箱")
-                        .multilineTextAlignment(.leading)
+        HStack{
+            VStack {
+                TextField("Input Your Name", text: $name)
+                List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+                    Text("输入框位置")
+                        .edgesIgnoringSafeArea(.top)
+                        .frame(height: 20.0)
                 }
                 
-                HStack{
-                    Text("图标箱 ->")
-                        .multilineTextAlignment(.leading)
-                    Text("收件箱")
-                        .multilineTextAlignment(.leading)
-                }
-                
-                Spacer().frame(width: 200.0)
-                
-            }.frame(width: 200)
+                Spacer()
+            }
+            .frame(width: 200.0)
             
             Divider()
             
-            VStack{
-                TextField("添加代办事件", text: $name)
-                VStack(alignment: .leading){
-                    HStack(){
-                        Text("name1").multilineTextAlignment(.leading)
-                    }
-                    
-                    HStack() {
-                        Text("name1").multilineTextAlignment(.leading)
-                    }
-                    Spacer().frame(width: 600.0)
+            VStack {
+                TextField("Input Your Keywords", text: $keywords)
+                
+                List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+                    Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
+                        .edgesIgnoringSafeArea(.top)
                 }
-            }.frame(width: 600.0)
+                
+                Spacer()
+            }
+            .frame(width: 600.0)
+
         }
     }
 }
