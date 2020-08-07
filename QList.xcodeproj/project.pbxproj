@@ -15,6 +15,9 @@
 		5FC9611324D44AFB00418BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC9611124D44AFB00418BFF /* Main.storyboard */; };
 		5FC9611F24D44AFB00418BFF /* QListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC9611E24D44AFB00418BFF /* QListTests.swift */; };
 		5FC9612A24D44AFB00418BFF /* QListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC9612924D44AFB00418BFF /* QListUITests.swift */; };
+		5FEB39B524DCEE3B007CEAFD /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB39B424DCEE3B007CEAFD /* Landmark.swift */; };
+		5FEB39B724DCEE8B007CEAFD /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5FEB39B624DCEE8B007CEAFD /* landmarkData.json */; };
+		5FEB39BC24DD2967007CEAFD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEB39BB24DD2967007CEAFD /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		5FC9612524D44AFB00418BFF /* QListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FC9612924D44AFB00418BFF /* QListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QListUITests.swift; sourceTree = "<group>"; };
 		5FC9612B24D44AFB00418BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FEB39B424DCEE3B007CEAFD /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		5FEB39B624DCEE8B007CEAFD /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
+		5FEB39BB24DD2967007CEAFD /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,8 @@
 		5FC9610424D44AF800418BFF /* QList */ = {
 			isa = PBXGroup;
 			children = (
+				5FEB39B324DCEDF5007CEAFD /* Models */,
+				5FEB39B224DCEDD3007CEAFD /* Resources */,
 				5FC9610524D44AF800418BFF /* AppDelegate.swift */,
 				5FC9610724D44AF800418BFF /* ContentView.swift */,
 				5FC9610C24D44AFB00418BFF /* Assets.xcassets */,
@@ -136,6 +144,23 @@
 				5FC9612B24D44AFB00418BFF /* Info.plist */,
 			);
 			path = QListUITests;
+			sourceTree = "<group>";
+		};
+		5FEB39B224DCEDD3007CEAFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5FEB39B624DCEE8B007CEAFD /* landmarkData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5FEB39B324DCEDF5007CEAFD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5FEB39B424DCEE3B007CEAFD /* Landmark.swift */,
+				5FEB39BB24DD2967007CEAFD /* Data.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FC9611324D44AFB00418BFF /* Main.storyboard in Resources */,
+				5FEB39B724DCEE8B007CEAFD /* landmarkData.json in Resources */,
 				5FC9611024D44AFB00418BFF /* Preview Assets.xcassets in Resources */,
 				5FC9610D24D44AFB00418BFF /* Assets.xcassets in Resources */,
 			);
@@ -270,8 +296,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FC9610B24D44AF800418BFF /* QList.xcdatamodeld in Sources */,
+				5FEB39BC24DD2967007CEAFD /* Data.swift in Sources */,
 				5FC9610824D44AF800418BFF /* ContentView.swift in Sources */,
 				5FC9610624D44AF800418BFF /* AppDelegate.swift in Sources */,
+				5FEB39B524DCEE3B007CEAFD /* Landmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
