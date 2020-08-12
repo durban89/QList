@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5FB188DC24E1921000A0F8E7 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB188DB24E1921000A0F8E7 /* CircleImage.swift */; };
+		5FB188DE24E22F2100A0F8E7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB188DD24E22F2100A0F8E7 /* MapView.swift */; };
 		5FC9610624D44AF800418BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC9610524D44AF800418BFF /* AppDelegate.swift */; };
 		5FC9610824D44AF800418BFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC9610724D44AF800418BFF /* ContentView.swift */; };
 		5FC9610B24D44AF800418BFF /* QList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FC9610924D44AF800418BFF /* QList.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		5FB188DB24E1921000A0F8E7 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		5FB188DD24E22F2100A0F8E7 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		5FC9610224D44AF800418BFF /* QList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FC9610524D44AF800418BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FC9610724D44AF800418BFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				5FB188DB24E1921000A0F8E7 /* CircleImage.swift */,
+				5FB188DD24E22F2100A0F8E7 /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				5FEB39C024E19089007CEAFD /* LandmarkList.swift in Sources */,
 				5FC9610624D44AF800418BFF /* AppDelegate.swift in Sources */,
 				5FEB39BE24E19068007CEAFD /* LandmarkDetail.swift in Sources */,
+				5FB188DE24E22F2100A0F8E7 /* MapView.swift in Sources */,
 				5FEB39B524DCEE3B007CEAFD /* Landmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
