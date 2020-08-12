@@ -22,7 +22,7 @@ func load<T: Decodable>(_ filename: String) -> T {
     do {
         data = try Data(contentsOf: file)
     } catch {
-        fatalError("Could not load \(filename) from main bundle. \n\(filename)")
+        fatalError("Could not load \(filename) from main bundle. \n\(error)")
     }
     
     do {
@@ -31,7 +31,6 @@ func load<T: Decodable>(_ filename: String) -> T {
     } catch {
         fatalError("Could not parse \(filename) as \(T.self):\n\(error)")
     }
-    
 }
 
 final class ImageStore{
