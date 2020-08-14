@@ -8,12 +8,25 @@
 
 import SwiftUI
 
+#if os(macOS)
+extension View {
+    func navigationBarTitle(_ title: String) -> some View {
+        self
+    }
+}
+#endif
+
 struct LandmarkList: View {
     var body: some View {
-        List(landmarkData){ landmark in
-            LandmarkRow(landmark: landmark)
+        NavigationView{
+            List(landmarkData){ landmark in
+                NavigationLink(destination: LandmarkDetail()){
+                    LandmarkRow(landmark: landmark)
+                }
+                
+            }
         }
-        
+        .navigationBarTitle("Landmarks")
     }
 }
 
