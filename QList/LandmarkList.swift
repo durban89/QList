@@ -17,13 +17,17 @@ extension View {
 #endif
 
 struct LandmarkList: View {
-    @State var showFavoriteOnly = false
+    @EnvironmentObject var userData: UserData
     
     var body: some View {
         NavigationView{
             List{
-                ForEach (landmarkData){ landmark in
-                    if !self.showFavoriteOnly || landmark.isFavorite {
+                Toggle(isOn: $userData.showFavoritesOnly) {
+                    Text("Favorites only")
+                }
+                
+                ForEach (userData.landmark){ landmark in
+                    if !self.userData.showFavoritesOnly || landmark.isFavorite {
                         NavigationLink(destination: LandmarkDetail(landmark: landmark)){
                             LandmarkRow(landmark: landmark)
                         }
@@ -38,7 +42,7 @@ struct LandmarkList: View {
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE", "iPhone XS MX"], id: \.self) { deviceName in
+        ForEach(["iPhone SE", "iPhone XS MX", "MAC OS"], id: \.self) { deviceName in
             LandmarkList()
             .previewDevice(PreviewDevice(rawValue: deviceName))
             .previewDisplayName(deviceName)
