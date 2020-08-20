@@ -55,6 +55,7 @@ struct LandmarkDetail: View {
             Spacer()
         }
         .navigationBarTitle(landmark.name)
+        .frame(minWidth: 600, maxWidth: 700)
     }
 }
 

@@ -35,8 +35,10 @@ struct LandmarkList: View {
                     
                 }
             }
+            .frame(minWidth:255, maxWidth: 300)
         }
         .navigationBarTitle("Landmarks")
+        
     }
 }
 
