@@ -9,7 +9,14 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    @EnvironmentObject var userData: UserData
+    
     var landmark: Landmark
+    
+    var landmarkIndex: Int {
+        userData.landmark.firstIndex(where: { $0.id == landmark.id })!
+    }
+    
     
     var body: some View {
         VStack {
@@ -20,8 +27,21 @@ struct LandmarkDetail: View {
                 .offset(y: -130)
                 .padding(.bottom, -130)
             VStack(alignment: .leading){
-                Text(landmark.name)
+                HStack{
+                    Text(landmark.name)
                     .font(.title)
+                    
+                    Button(action: {
+                        self.userData.landmark[self.landmarkIndex].isFavorite.toggle()
+                    }){
+                        if self.userData.landmark[self.landmarkIndex].isFavorite {
+                            Text("On").foregroundColor(Color.yellow)
+                        } else {
+                            Text("Off").foregroundColor(Color.gray)
+                        }
+                    }
+                }
+                
                 HStack{
                     Text(landmark.park)
                         .font(.subheadline)
